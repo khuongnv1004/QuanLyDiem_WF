@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEFA16DE-600E-4B5F-B8F5-3F27AA28ED67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDiemHocSinh</RootNamespace>
+    <AssemblyName>QuanLyDiemHocSinh</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Microsoft.Office.Interop.Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BCDIEM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BCDIEM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaocao.Designer.cs">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiemHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiemHS.Designer.cs">
+      <DependentUpon>frmDiemHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLGiaovien.Designer.cs">
+      <DependentUpon>frmQLGiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHocSinh.Designer.cs">
+      <DependentUpon>frmQLHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.Designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemDiem.Designer.cs">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ketnoi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyDiem.Designer.cs">
+      <DependentUpon>frmQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLLop.Designer.cs">
+      <DependentUpon>frmQLLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLPhanlop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLPhanlop.Designer.cs">
+      <DependentUpon>frmQLPhanlop.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BCDIEM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BCDIEM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaocao.resx">
+      <DependentUpon>frmBaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiemHS.resx">
+      <DependentUpon>frmDiemHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLGiaovien.resx">
+      <DependentUpon>frmQLGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHocSinh.resx">
+      <DependentUpon>frmQLHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLPhanlop.resx">
+      <DependentUpon>frmQLPhanlop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemDiem.resx">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmQuanLyDiem.resx">
+      <DependentUpon>frmQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLLop.resx">
+      <DependentUpon>frmQLLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\thoat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\closephanlop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\hanhkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\hocluc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\xemdiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\dshocsinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\dsgiaovien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\lophoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\diem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\dslophoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\dangnhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\dangxuat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\doimatkhaucontext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Resources\tracuuhocsinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
